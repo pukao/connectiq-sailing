@@ -85,7 +85,8 @@ class SailingView extends Ui.View {
 	        if( Toybox has :ActivityRecording ) {
 	            if( ( session == null ) || ( session.isRecording() == false ) ) {
     				Sys.println("start ActivityRecording");
-	                session = Record.createSession({:name=>"Sailing", :sport=>Record.SPORT_GENERIC});
+			// FIT definition SPORT_SAILING -> 32
+	                session = Record.createSession({:name=>"Sailing", :sport=>32});
 	                session.start();
 	                recStatus = "REC";
 	            }
